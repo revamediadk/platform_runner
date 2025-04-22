@@ -28,6 +28,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+
+      - name: Prepare secrets
+        run: |
+          mkdir -p secrets
+          echo "${{ secrets.BQ_DB_JSON }}" > secrets/bq_db.json
+          echo "${{ secrets.CLIENT_SECRET_JSON }}" > secrets/client_secret.json
+          echo "${{ secrets.GA4_TOKEN_BASE64 }}" | base64 -d > secrets/token.pickle
+
       - name: Inspect bq_db.json (sanitized)
         run: |
           echo "-------- START OF FILE --------"
@@ -36,13 +44,6 @@ jobs:
 
       - name: Validate JSON format
         run: python -m json.tool < secrets/bq_db.json
-
-      - name: Prepare secrets
-        run: |
-          mkdir -p secrets
-          echo "${{ secrets.BQ_DB_JSON }}" > secrets/bq_db.json
-          echo "${{ secrets.CLIENT_SECRET_JSON }}" > secrets/client_secret.json
-          echo "${{ secrets.GA4_TOKEN_BASE64 }}" | base64 -d > secrets/token.pickle
 
       - name: Run the script
         run: python main.py
