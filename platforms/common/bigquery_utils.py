@@ -43,7 +43,7 @@ def insert_to_bigquery(rows: list, table_id: str):
             # Cast to match BigQuery types
             row['market_id'] = str(row['market_id'])
             row['cost'] = float(row['cost'])
-            row['conversions'] = int(row['conversions'])
+            row['conversions'] = int(row['conversions'] or 0)
             row['market_name'] = str(row['market_name'])
             row['market_sector'] = str(row['market_sector'])
 
