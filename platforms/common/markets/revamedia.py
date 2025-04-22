@@ -7,7 +7,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': '5933105',
             'rebilly_id': 'bostadshub-se',
             'trustpilot_id': '5c8276aef229920001fc730f',
-            'ga4_id': '320217133',
+            'ga4': '320217133',
             'google_ads_id': '1182937893',
             'google_analytics': {
                 'id': "a127162551w187333016p184123274",
@@ -23,7 +23,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': None,
             'rebilly_id': 'bostadslistan-se',
             'trustpilot_id': '5d57da0f8f86c3000192cafc',
-            'ga4_id': '320196084',
+            'ga4': '320196084',
             'google_ads_id': '1180414731',
             'google_analytics': {
                 'id': "a127162551w198473869p193056980",
@@ -39,7 +39,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': None,
             'rebilly_id': None,
             'trustpilot_id': '5d5c046b7198340001a1227f',
-            'ga4_id': None,
+            'ga4': '',
             'google_ads_id': '346326164',
             'google_analytics': {
                 'id': None,
@@ -55,7 +55,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': '5933101',
             'rebilly_id': 'findboliger-dk',
             'trustpilot_id': '5c629d4d58ba3f0001df90b2',
-            'ga4_id': '321373024',
+            'ga4': '321373024',
             'google_ads_id': '1180275247',
             'google_analytics': {
                 'id': "a127162551w3040377p3107076",
@@ -71,7 +71,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': None,
             'rebilly_id': None,
             'trustpilot_id': '4f32c6f7000064000512c040',
-            'ga4_id': '321390977',
+            'ga4': '321390977',
             'google_ads_id': '289175416',
             'google_analytics': {
                 'id': "a45120784w94722967p98714175",
@@ -87,7 +87,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': None,
             'rebilly_id': None,
             'trustpilot_id': '4cb351bd00006400050dfb46',
-            'ga4_id': None,
+            'ga4': '',
             'google_ads_id': '289191002',
             'google_analytics': {
                 'id': None,
@@ -103,7 +103,7 @@ REVAMEDIA_MARKET = {
             'thribee_id': None,
             'rebilly_id': None,
             'trustpilot_id': '6045d3bfc478e4000198a281',
-            'ga4_id': '321349317',
+            'ga4': '321349317',
             'google_ads_id': '1176950298',
             'google_analytics': {
                 'id': "a127162551w208853664p201242386",
