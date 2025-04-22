@@ -32,8 +32,8 @@ jobs:
       - name: Prepare secrets
         run: |
           mkdir -p secrets
-          echo "${{ secrets.BQ_DB_JSON }}" > secrets/bq_db.json
-          echo "${{ secrets.CLIENT_SECRET_JSON }}" > secrets/client_secret.json
+          echo "${{ secrets.BQ_DB_JSON }}" | base64 -d > secrets/bq_db.json
+          echo "${{ secrets.CLIENT_SECRET_JSON }}" | base64 -d > secrets/client_secret.json
           echo "${{ secrets.GA4_TOKEN_BASE64 }}" | base64 -d > secrets/token.pickle
 
       - name: Inspect bq_db.json (sanitized)
