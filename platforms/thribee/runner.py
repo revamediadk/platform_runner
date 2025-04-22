@@ -25,8 +25,8 @@ def run_display_and_bigquery(start_date: datetime, end_date: datetime, mode: str
                 )
 
                 print(f"✅ Total Cost: {market_data['cost']}")
-                if market_data.get('conversion') is not None:
-                    print(f"🎯 GA4 Conversions: {market_data['conversion']}")
+                if market_data.get('conversions') is not None:
+                    print(f"🎯 GA4 Conversions: {market_data['conversions']}")
                 else:
                     print("🎯 GA4 Conversions: Not available")
 
@@ -39,7 +39,7 @@ def run_display_and_bigquery(start_date: datetime, end_date: datetime, mode: str
                 row = {
                     "date": start_date.date().isoformat(),
                     "cost": market_data["cost"],
-                    "conversions": market_data.get("conversion", 0),
+                    "conversions": market_data.get("conversions", 0),
                     "market_name": website,
                     "market_id": thribee_id,
                     "market_sector": sector["sector"]
