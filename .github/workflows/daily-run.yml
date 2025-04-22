@@ -28,6 +28,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Inspect bq_db.json (sanitized)
+        run: |
+          echo "-------- START OF FILE --------"
+          head -n 20 secrets/bq_db.json | sed 's/"private_key": "[^"]\+"/"private_key": "***REDACTED***"/g'
+          echo "--------- END OF FILE ---------"
+
+      - name: Validate JSON format
+        run: python -m json.tool < secrets/bq_db.json
+
       - name: Prepare secrets
         run: |
           mkdir -p secrets
